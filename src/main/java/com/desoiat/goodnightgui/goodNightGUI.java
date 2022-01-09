@@ -17,7 +17,7 @@ import java.io.*;
 import javax.sound.sampled.*;
 import java.awt.*;
 import java.util.Date;
-import java.util.Objects;
+
 
 
 public class goodNightGUI extends Application {
@@ -38,7 +38,7 @@ public class goodNightGUI extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws InterruptedException, LineUnavailableException, IOException, UnsupportedAudioFileException {
+    public void start(Stage primaryStage) throws LineUnavailableException, IOException, UnsupportedAudioFileException {
 
         //标题
         primaryStage.setTitle("Good Night GUI");
@@ -209,16 +209,18 @@ public class goodNightGUI extends Application {
 
 
 
-        //调整 按钮
+        //调整 按钮 CSS
+        String guiCss = "https://raw.githubusercontent.com/DeSoiat/GoodNightGUI/main/src/main/resources/com/desoiat/goodnightgui/css/gui.css";
+
         b1.setPrefSize(180,30);
         b1.setTranslateX(-250); //因为 使用了 stack 所以必须使用 translatex 才可以移动
         b1.setTranslateY(-170);
-        b1.getStylesheets().add("https://raw.githubusercontent.com/DeSoiat/GoodNight-GUI/main/style.css");
+        b1.getStylesheets().add(guiCss);
 
         play.setPrefSize(180,30);
         play.setTranslateY(-250);
         play.setTranslateY(150);
-        play.getStylesheets().add("https://raw.githubusercontent.com/DeSoiat/GoodNight-GUI/main/style.css");
+        play.getStylesheets().add(guiCss);
 
         tf.setTranslateX(-200);
         tf.setTranslateY(-60);
@@ -227,11 +229,11 @@ public class goodNightGUI extends Application {
         tf1.setTranslateY(-120);
 
         root.setId("stack-pane");
-        root.getStylesheets().add("https://raw.githubusercontent.com/DeSoiat/GoodNight-GUI/main/style.css");
+        root.getStylesheets().add(guiCss);
 
         textArea1.setTranslateX(180);
         textArea1.setTranslateY(-15);
-        textArea1.getStylesheets().add("https://raw.githubusercontent.com/DeSoiat/GoodNight-GUI/main/style.css");
+        textArea1.getStylesheets().add(guiCss);
 
 
 
